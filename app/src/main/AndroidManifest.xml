@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="PeadApp">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="PeadApp.UpdateActivity"
+            android:parentActivityName="PeadApp.Record"/>
+
+        <activity
+            android:name="PeadApp.AddActivity"
+            android:label="Add Record"
+            android:parentActivityName="PeadApp.Record" />
+        <activity android:name="PeadApp.Mothers"
+            android:label="Mum's Care"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity
+            android:name="PeadApp.Record"
+            android:label="Record Growth"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity android:name="PeadApp.Diet"
+            android:label="Diet"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity android:name="PeadApp.Registration"
+            android:label="Child Registration Form"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity android:name="PeadApp.Care"
+           android:label="Child Care"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity android:name="PeadApp.Dashboard"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity
+            android:name="PeadApp.SplashScreen"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="PeadApp.SetReminder"
+            android:label="Set Reminder"
+            android:parentActivityName=".Dashboard"/>
+
+        <activity android:name="PeadApp.MainActivity"/>
+
+        <receiver android:name="PeadApp.NotifierAlarm" />
+    </application>
+
+</manifest>
